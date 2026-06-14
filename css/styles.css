@@ -11069,7 +11069,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/danboS1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11140,10 +11140,31 @@ body {
     padding: 5rem;
   }
 }
+.about-section {
+  position: relative !important;
+  overflow: hidden !important; /* 👈 繼續維持裁切菜刀功能 */
 
+  /* ⭕ 關鍵修正一：把原本的 padding-bottom 從 0 改成巨大的像素！
+     這行會強行把這個黑底區塊「往下方撐開空間」，
+     這樣唱片放大時就不會往上吃掉你的歌詞字了！ */
+  padding-top: 10rem !important;
+  padding-bottom: 30rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   唱片尺寸微調（配合你的 HTML 行內樣式來補強）
+   ========================================================================== */
+.about-section img.img-fluid {
+  /* ⭕ 關鍵修正二：在 CSS 裡把唱片的比例稍微縮小一點點
+     如果還是覺得唱片太大，可以把 45vw 再往下調（例如 40vw 或 35vw） */
+  width: 45vw !important;
+  max-width: 500px !important;
+  height: auto !important;
+}
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/蛋堡_001.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
